@@ -1,14 +1,29 @@
 scene :p2 => "寮_共有B" do
 	character :a => "小小"
-	character :b => "道长"
-
-	say "小小回到了家"
-	a "我早已饥渴难耐了！"
-	b.sprite "1", 1
-	b "这么巧，我也是呢~哥哥~"
-	a "那……"
-	b "恩恩！"
-	say "啪！啪！啪！啪！啪！啪！啪！啪！啪！啪！啪！啪！"
+	character :c => "胡亦乾"
 	
+	say "下课的时候，胡亦乾又过来了。"
+	c.sprite "0", 0
+	c "我问你，你是不是"
+	label :start
+	select do
+		choice "是" do
+
+			c "果然！"
+		end
+
+		choice "不是" do
+			c "你再仔细想一想！"
+			goto :start
+		end
+
+		choice "..." do
+			 c "你不要回答我别的，就回答我是不是！"
+			 goto :start
+		end
+	end
+	c.sprite "1"
+	say "胡亦乾走了。"
+
 	fin
 end

@@ -26,14 +26,16 @@ scene :prolog => "学院_廊下D" do
 					b "好吧..."
 				end
 			end
-			a "那你考了满分么？"			
+			a "那你考了满分么？"		
 		end
 	end
 	say "这时候上课铃打了"
-	since :test do
-		b.say "没有..."
-	end
 	b.sprite "1"
+	since :test do
+		b "没有..."
+	otherwise
+		b "这么快就上课了..."
+	end
 	
 	chapter :p1
 end
