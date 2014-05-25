@@ -4,11 +4,10 @@ scene :p2 => "寮_共有B" do
 	
 	say "下课的时候，胡亦乾又过来了。"
 	c.sprite "0", 0
-	c "我问你，你是不是"
+	c "我问你，你是不是傻逼?"
 	label :start
 	select do
 		choice "是" do
-
 			c "果然！"
 		end
 
@@ -18,12 +17,12 @@ scene :p2 => "寮_共有B" do
 		end
 
 		choice "..." do
-			 c "你不要回答我别的，就回答我是不是！"
-			 goto :start
+			c "你不要回答我别的，就回答我是不是！"
+			goto :start
 		end
 	end
 	c.sprite "1"
 	say "胡亦乾走了。"
 
-	fin
+	chapter :day0s1
 end
