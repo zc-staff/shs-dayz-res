@@ -1,6 +1,8 @@
-scene :prolog => "学院_廊下D" do
+scene :prolog do
 	character :a => "小小"
 	character :b => "沈笑阳"
+
+	chapter :day1s1
 	
 	say "下课的时候，沈笑阳走了过来"
 	b.sprite "0", 0
